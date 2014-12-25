@@ -1,0 +1,57 @@
+extends layout
+
+block content
+    h1 Currency quotes
+
+    #usd-table
+        h2 USD/RUR
+        #my-table
+            table
+                thead
+                    th Year
+                    th Month
+                    th Day
+                    th RUR
+                tbody
+                    for quote in usdQuotes
+                        tr 
+                            td #{quote.year}
+                            td #{quote.month}
+                            td #{quote.day}
+                            td
+                                a(href="/dataApi/usd/#{quote._id}", target="_blank") #{quote.price}
+
+    #eur-table
+        h2 EUR/RUR
+        #my-table
+            table
+                thead
+                    th Year
+                    th Month
+                    th Day
+                    th RUR                    
+                tbody     
+                    for quote in eurQuotes
+                        tr 
+                            td #{quote.year}
+                            td #{quote.month}
+                            td #{quote.day}
+                            td
+                                a(href="/dataApi/eur/#{quote._id}", target="_blank") #{quote.price}
+    #action-log
+        h2 Tasks
+        #my-table
+            table
+                thead
+                    th Id
+                    th Currency
+                    th From
+                    th To
+                tbody     
+                    for request in requests
+                        tr 
+                            td 
+                                a(href="/taskApi/#{request._id}", target="_blank") #{request._id}
+                            td #{request.currency}
+                            td #{request.from}
+                            td #{request.to}

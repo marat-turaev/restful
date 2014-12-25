@@ -1,0 +1,61 @@
+body {
+  padding: 30px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+h2 {
+	margin:0 0 .5em 0;
+}
+
+a {
+  color: #00B7FF;
+}
+
+#usd-table {
+	clear: left;
+	float: left;
+}
+
+#eur-table {
+	margin-left: 10px;
+	float: left;
+}
+
+#action-log {
+	float: right;	
+}
+
+#my-table {
+	margin:0 0 30px 0;
+}
+	#my-table table {
+		border-collapse:separate;
+		border-spacing:1px;
+		background:#CCC;
+	}
+		#my-table table th {
+			background:#EEE;
+			font-weight:600;
+			padding:10px 20px;
+			text-align:center;
+		}
+		#my-table table tbody {
+			padding:0; margin:0;
+			border-collapse:collapse;
+			border-spacing:0px;
+		}
+			#my-table table td {
+				background:#FFF;
+				padding:5px 10px;
+				text-align:center;
+			}
+
+#left {
+	position:absolute;
+	top:0; left:0;
+}
+
+fieldset {
+	border:0;
+	padding:0; margin:0;
+}
